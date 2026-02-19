@@ -1,6 +1,6 @@
 #pragma once
 
-#include <metal-cpp/Metal/Metal.hpp>
+#include <Metal/Metal.hpp>
 
 #include "LumenEngine/graphics/Texture.hpp"
 

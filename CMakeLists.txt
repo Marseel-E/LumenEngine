@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(2D_SANDBOX_MMO_PROJECT)
+project(PROJECT_AETHERIA)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -17,6 +17,7 @@ find_package(SDL2_ttf REQUIRED)
 include_directories(
 	"src"
 	"vendor"
+	"vendor/metal-cpp"
 	${SDL2_INCLUDE_DIRS}
 	"/opt/homebrew/include"
 )
@@ -24,21 +25,21 @@ include_directories(
 file(GLOB_RECURSE ENGINE_SOURCES CONFIGURE_DEPENDS "src/LumenEngine/*.cpp")
 file(GLOB_RECURSE GAME_SOURCES CONFIGURE_DEPENDS "src/AetheriaEngine/*.cpp")
 
-add_executable(2D_SANDBOX_SERVER
-	src/EchoServer/server.cpp
-)
+# add_executable(EchoServer
+# 	src/EchoServer/server.cpp
+# )
 
-target_link_libraries(2D_SANDBOX_SERVER
-	PRIVATE
-	${ENET_LIB}
-)
+# target_link_libraries(EchoServer
+# 	PRIVATE
+# 	${ENET_LIB}
+# )
 
-add_executable(2D_SANDBOX_MMO
+add_executable(ProjectAetheria
 	${ENGINE_SOURCES}
 	${GAME_SOURCES}
 )
 
-target_link_libraries(2D_SANDBOX_MMO 
+target_link_libraries(ProjectAetheria 
 	PRIVATE
 	${SDL2_LIBRARIES}
 	SDL2_ttf::SDL2_ttf

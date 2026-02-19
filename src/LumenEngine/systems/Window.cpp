@@ -58,15 +58,24 @@ bool Window::PollEvents() {
 		// Window closed.
 		if (event.type == SDL_QUIT) {
 			return false;
-		}
+		};
 
-		// Input handling
-		else if (event.type == SDL_KEYDOWN) {
+		// Keyboard
+		if (event.type == SDL_KEYDOWN) {
 			Input::SetKey(event.key.keysym.sym, true);
-		}
+		};
 
-		else if (event.type == SDL_KEYUP) {
+		if (event.type == SDL_KEYUP) {
 			Input::SetKey(event.key.keysym.sym, false);
+		};
+
+		// Mouse
+		if (event.type == SDL_MOUSEBUTTONDOWN) {
+			Input::SetMouseButton(event.button.button, true);
+		};
+
+		if (event.type == SDL_MOUSEBUTTONUP) {
+			Input::SetMouseButton(event.button.button, false);
 		};
 	};
 

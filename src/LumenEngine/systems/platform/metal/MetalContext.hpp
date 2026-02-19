@@ -1,8 +1,8 @@
 #pragma once
 
-#include <metal-cpp/Metal/Metal.hpp>
-#include <metal-cpp/QuartzCore/CAMetalLayer.hpp>
-#include <metal-cpp/QuartzCore/QuartzCore.hpp>
+#include <Metal/Metal.hpp>
+#include <QuartzCore/CAMetalLayer.hpp>
+#include <QuartzCore/QuartzCore.hpp>
 #include <vector>
 
 #include "LumenEngine/graphics/GraphicsContext.hpp"

@@ -21,6 +21,8 @@ public:
 
 	Rect GetBounds() const { return {m_position.x, m_position.y, m_size.x, m_size.y}; };
 
+	Vec4 GetColor() const { return m_color; };
+
 protected:
 	Vec2 m_position;
 	Vec2 m_size;
